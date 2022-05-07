@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta charset="UTF-8">
 		<title>Test</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+		<script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+		<script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+		<script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 	
-			<header th:replace="/layout/header"></header>
 		
-		<nav>
+	    <header th:replace="/layout/header::header"></header>  
+		<!-- <nav>
 			<ul>
 				<a href="index.html">Inicio</a></br>
 				<a href="Agenda.html">Agenda</a></br>
@@ -16,22 +20,39 @@
 				<a href="contacto.html">Contactanos </a></br>
 			</ul>
 		</nav>
-		</br>
+		-->
+		
+		<nav class="bg-info">
+        <ul>
+            <li><a href="index">Inicio</a></li>
+            <li><a href="agenda">Agenda</a></li>
+            <li><a href="beneficios">Beneficios y Beca</a></li>
+            <li><a href="contacto">Contáctanos</a></li>
+       	</ul>
+    	</nav>
+		
+
 		<section>
-			<h4>Cursos con inscripcion abierta</h4>
-			<ol>
-				<a>1 Idiomas</a></br>
-				<a>2 Disenio</a></br>
-				<a>3 Desarrollo</a></br>
-				<a href="Marketing.html">4 Marketing</a><br>
-				<a>5 Conferencias</a></br>
-			</ol>
-		</section>
-		<hr>
+        <h2>"Cursos con inscripción abierta"</h2>
+        <div class="">
+            <ol>
+                <li><a href="">Idiomas</a></li>
+                <li><a href="">Diseño</a></li>
+                <li><a href="">Desarrollo</a></li>
+                <li><a href="">Marketing</a></li>
+                <li><a href="">Conferencias</a></li>
+            </ol>
+        </div>
+    	</section>
+		
+		 <table th:replace="/layout/header::tables"></table>
+		 
+		 <header th:replace="/layout/footer::footer"></header>  
+		
 		<footer>
 			<p style="text-align: center;padding: 1%;"> 2022. Portal de Capacitacion - Av. Gral. Manuel Belgrano 789 - Telefono (388) 999999 S. S. de Jujuy Republica
 Argentina. </p>
 		</footer>		
 	</body>
 </html>
-<!-- PRUEBA COMMIT AND PUSH
+<!-- PRUEBA COMMIT AND PUSH-->
